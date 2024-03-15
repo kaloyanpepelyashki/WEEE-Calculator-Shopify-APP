@@ -1,4 +1,4 @@
-export default class DpaCalulatorAccessor {
+export default class WeeeCalulatorAccessor {
   protected url: string;
   constructor() {
     this.url = "http://localhost:3000/";
@@ -15,7 +15,7 @@ export default class DpaCalulatorAccessor {
           dataList = data;
         });
       return dataList;
-    } catch (e) {
+    } catch (e: any) {
       throw new Error(`Error fetching data: ${e.message}`);
     }
   }

@@ -15,11 +15,12 @@ import {
   InlineStack,
 } from "@shopify/polaris";
 import { authenticate } from "../shopify.server";
-import DpaCalculatorAccessor from "../Services/DPACalculatorAccessor";
+import WeeeCalculatorAccessor from "../Services/WeeeCalculatorAccessor";
 
 export default function Index() {
   const [data, setData] = useState([0]);
-  const dpaCalcualtor = new DpaCalculatorAccessor();
+  const dpaCalcualtor = new WeeeCalculatorAccessor();
+
   const outputData = async () => {
     setData(await dpaCalcualtor.fetchData());
   };
