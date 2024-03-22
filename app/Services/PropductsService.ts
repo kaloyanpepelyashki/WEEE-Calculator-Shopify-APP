@@ -1,5 +1,5 @@
-class ProductsManager {
-  private static instance: ProductsManager;
+class ProductsService {
+  private static instance: ProductsService;
   protected serverUrl: string;
   constructor() {
     this.serverUrl = "http://localhost:3000/";
@@ -7,7 +7,7 @@ class ProductsManager {
 
   public static getInstance() {
     if (!this.instance) {
-      this.instance = new ProductsManager();
+      this.instance = new ProductsService();
     }
     return this.instance;
   }
@@ -33,4 +33,4 @@ class ProductsManager {
   }
 }
 
-export default ProductsManager;
+export default ProductsService;
