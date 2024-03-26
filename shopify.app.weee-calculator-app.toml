@@ -2,7 +2,7 @@
 
 client_id = "24b95980e757248e88501068a5049191"
 name = "weee-calculator-app"
-application_url = "https://ntsc-informal-electricity-finished.trycloudflare.com"
+application_url = "https://wilderness-inquiries-ready-executives.trycloudflare.com"
 embedded = true
 
 [build]
@@ -15,9 +15,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://ntsc-informal-electricity-finished.trycloudflare.com/auth/callback",
-  "https://ntsc-informal-electricity-finished.trycloudflare.com/auth/shopify/callback",
-  "https://ntsc-informal-electricity-finished.trycloudflare.com/api/auth/callback"
+  "https://wilderness-inquiries-ready-executives.trycloudflare.com/auth/callback",
+  "https://wilderness-inquiries-ready-executives.trycloudflare.com/auth/shopify/callback",
+  "https://wilderness-inquiries-ready-executives.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
