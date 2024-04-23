@@ -2,7 +2,7 @@
 
 client_id = "24b95980e757248e88501068a5049191"
 name = "weee-calculator-app"
-application_url = "https://wilderness-inquiries-ready-executives.trycloudflare.com"
+application_url = "https://detective-congratulations-yes-membership.trycloudflare.com"
 embedded = true
 
 [build]
@@ -11,13 +11,13 @@ dev_store_url = "testingforstoreistest.myshopify.com"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products"
+scopes = "read_products,write_products"
 
 [auth]
 redirect_urls = [
-  "https://wilderness-inquiries-ready-executives.trycloudflare.com/auth/callback",
-  "https://wilderness-inquiries-ready-executives.trycloudflare.com/auth/shopify/callback",
-  "https://wilderness-inquiries-ready-executives.trycloudflare.com/api/auth/callback"
+  "https://detective-congratulations-yes-membership.trycloudflare.com/auth/callback",
+  "https://detective-congratulations-yes-membership.trycloudflare.com/auth/shopify/callback",
+  "https://detective-congratulations-yes-membership.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

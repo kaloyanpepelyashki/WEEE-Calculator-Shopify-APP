@@ -1,10 +1,16 @@
 /**
  * This class provides an entry point to the collections total weight calculator
+ * The class constructor expects to get shopify accessToken and shop host name.
+ * The accessToken and hostName must be sent in the header of every request
  */
 export default class WeeeCalulatorAccessor {
   protected url: string;
-  constructor() {
+  protected accessToken: string;
+  protected hostName: string;
+  constructor(accessToken: string, hostName: string) {
     this.url = "http://localhost:3000";
+    this.accessToken = accessToken;
+    this.hostName = hostName;
   }
 
   /**
@@ -19,6 +25,8 @@ export default class WeeeCalulatorAccessor {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "access-token": this.accessToken,
+          "host-name": this.hostName,
         },
         body: JSON.stringify(targetCollectionsTitles),
       })

@@ -1,16 +1,12 @@
 class WeeeCollectionsService {
-  public static instance: WeeeCollectionsService;
   private url: string;
-  protected constructor() {
+  protected accessToken: string;
+  protected hostName: string;
+
+  constructor(accessToken: string, hostName: string) {
     this.url = "http://localhost:3000";
-  }
-
-  public static getInstance(): WeeeCollectionsService {
-    if (this.instance == null) {
-      this.instance = new WeeeCollectionsService();
-    }
-
-    return this.instance;
+    this.accessToken = accessToken;
+    this.hostName = hostName;
   }
 
   public async createColletions(collections: Array<string>) {
@@ -19,6 +15,8 @@ class WeeeCollectionsService {
         method: "post",
         headers: {
           "Content-Type": "application/json",
+          "access-token": this.accessToken,
+          "host-name": this.hostName,
         },
         body: JSON.stringify(collections),
       });
@@ -35,9 +33,11 @@ class WeeeCollectionsService {
   ) {
     try {
       const result = await fetch(`${this.url}/addProductsToCollection`, {
-        method: "post",
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "access-token": this.accessToken,
+          "host-name": this.hostName,
         },
         body: JSON.stringify({
           collectionName: collectionName,
