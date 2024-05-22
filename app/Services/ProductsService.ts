@@ -10,7 +10,7 @@ class ProductsService {
   protected hostName: string;
 
   constructor(accessToken: string, hostName: string) {
-    this.serverUrl = "http://localhost:3000";
+    this.serverUrl = "https://weee-calculator-server.onrender.com/api/v1/";
     this.accessToken = accessToken;
     this.hostName = hostName;
   }

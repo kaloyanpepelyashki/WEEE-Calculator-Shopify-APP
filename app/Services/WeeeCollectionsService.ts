@@ -4,7 +4,7 @@ class WeeeCollectionsService {
   protected hostName: string;
 
   constructor(accessToken: string, hostName: string) {
-    this.url = "http://localhost:3000";
+    this.url = "https://weee-calculator-server.onrender.com/api/v1/";
     this.accessToken = accessToken;
     this.hostName = hostName;
   }
